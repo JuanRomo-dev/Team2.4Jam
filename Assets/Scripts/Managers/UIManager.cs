@@ -222,6 +222,11 @@ public class UIManager : MonoBehaviour
         credibility.text = actualCredibility.ToString();
     }
 
+    public void UpdateFollowers(int newFollowers)
+    {
+        followers.text = newFollowers.ToString();
+    }
+    
     public void ShowEndGamePanel(bool win)
     {
         // if (win)

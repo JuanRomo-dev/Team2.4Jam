@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     private float roundTimeBonus = 20.0f;
     private int correctPoints = 1;
     private int incorrectPoints = -3; // negative
+    private float popularityFallingTimer = 0f;
+    
     
     private void Awake()
     {
@@ -64,6 +66,17 @@ public class GameManager : MonoBehaviour
             _timer -= Time.deltaTime;
             _roundTimer += Time.deltaTime;
             
+            popularityFallingTimer += Time.deltaTime;
+            if (popularityFallingTimer >= 1f)
+            {
+                if (popularity > 0)
+                {
+                    print("Minus one follower");
+                    popularity--;
+                    uiManager.UpdateFollowers(popularity);
+                }
+                popularityFallingTimer = 0f;
+            }
             if (_timer <= 0f)
             {
                 // End game
