@@ -42,6 +42,7 @@ public class CanvasManager : MonoBehaviour
         Debug.Log("Exiting game...");
     }
 
+    
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
