@@ -2362,8 +2362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualView: 2
-  transitionDurations: 2
-  entryTransitionDelay: 0.5
+  transitionDurations: 0.5
+  entryTransitionDelay: 2
   roomTransitionDelay: 0.01
   pcViewTransform: {fileID: 2142252248}
   roomViewTransform: {fileID: 819403952}
