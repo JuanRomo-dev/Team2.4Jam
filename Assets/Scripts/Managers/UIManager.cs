@@ -23,9 +23,7 @@ public class UIManager : MonoBehaviour
     {
         for (int i = 0; i < newNewsList.Count; i++)
         {
-            GameObject newPromptPrefab = Instantiate(newsPrefab);
-
-            newPromptPrefab.transform.SetParent(prompList.transform);
+            GameObject newPromptPrefab = Instantiate(newsPrefab, prompList.transform);
 
             UINewsBehaviour newPrompt = newPromptPrefab.GetComponent<UINewsBehaviour>();
 

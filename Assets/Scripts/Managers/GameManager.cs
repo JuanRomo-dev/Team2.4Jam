@@ -86,10 +86,10 @@ public class GameManager : MonoBehaviour
         // Clean selectes news for submit on new round
         selectedNewsList = new List<NewsData>();
 
-        uiManager.ReceiveNewsList(selectedNewsList);
+        uiManager.ReceiveNewsList(currentNewsList);
     }
 
-    void SubmitRound()
+    public void SubmitRound()
     {
         currentGameState = GameState.RoundEnded;
         
