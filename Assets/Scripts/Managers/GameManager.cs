@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _timer = gameTime;
+
+        uiManager.OnGameTimeEnded += HandleGameTimeEnded;
     }
     
     // Update is called once per frame
@@ -129,6 +131,9 @@ public class GameManager : MonoBehaviour
     void EndGame(bool win)
     {
         currentGameState = win ? GameState.GameWon : GameState.GameOver;
+        uiManager.ShowEndGamePanel(win);
+        
+        Time.timeScale = 0f;
     }
 
     // Add news from prompt list to post list
@@ -136,5 +141,13 @@ public class GameManager : MonoBehaviour
     {
         currentNewsList.Remove(news);
         selectedNewsList.Add(news);
+    }
+
+    private void HandleGameTimeEnded()
+    {
+        if (currentGameState == GameState.PlayingRound)
+        {
+            EndGame(true);
+        }
     }
 }
