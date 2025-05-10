@@ -130,4 +130,11 @@ public class GameManager : MonoBehaviour
     {
         currentGameState = win ? GameState.GameWon : GameState.GameOver;
     }
+
+    // Add news from prompt list to post list
+    public void addPromptToPostList(NewsData news)
+    {
+        currentNewsList.Remove(news);
+        selectedNewsList.Add(news);
+    }
 }

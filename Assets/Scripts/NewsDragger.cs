@@ -19,7 +19,13 @@ public class NewsDragger : MonoBehaviour
     {
         if(prompToAdd != null && postsNewsList != null)
         {
-            prompToAdd.transform.SetParent(postsNewsList.transform);
+            GameObject postCloned = Instantiate(prompToAdd, postsNewsList.transform);
+            
+            Button btn = postCloned.GetComponent<Button>();
+            if(btn != null) btn.interactable = false;
+            
+            prompToAdd.SetActive(false);
+            GameManager.Instance.addPromptToPostList(prompToAdd.GetComponent<UINewsBehaviour>().newsData);
         }
         else
         {

@@ -87,12 +87,24 @@ public class UIManager : MonoBehaviour
 
     public void EndRound(float newFollowers, float newCredibility)
     {
-        CleanPrompList();
+        RevealReality();
+        
         UpdateCounters(newFollowers, newCredibility);
+        CleanPrompList();
     }
 
     //Limpiar la bandeja de promps de noticias, poniendo cuales eran verdaderas y cuales eran falsas. 
     private void CleanPrompList()
+    {
+        for (int i = 0; i < actualNewsList.Count; i++)
+        {
+            actualNewsList[i].EndRound();
+            Destroy(actualNewsList[i].gameObject);
+        }
+        actualNewsList.Clear();
+    }
+
+    private void RevealReality()
     {
         for (int i = 0; i < actualNewsList.Count; i++)
         {

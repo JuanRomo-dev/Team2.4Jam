@@ -10,7 +10,7 @@ public class UINewsBehaviour : MonoBehaviour
     //Manager for changing news from promp to posts
     private NewsDragger newsDragger;
 
-    private NewsData newsData;
+    public NewsData newsData;
 
     public Image image;
     public TextMeshProUGUI headline;
@@ -37,7 +37,7 @@ public class UINewsBehaviour : MonoBehaviour
 
     public void EndRound()
     {
-        //TODO: Demonstrar si era de verdad o de mentira
+        //TODO: Demostrar si era de verdad o de mentira
         if(isReal)
         {
             headline.color = Color.green;

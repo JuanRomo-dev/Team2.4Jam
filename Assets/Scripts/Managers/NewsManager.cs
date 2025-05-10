@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class NewsManager : MonoBehaviour
@@ -20,6 +21,8 @@ public class NewsManager : MonoBehaviour
     }
 
     public List<DifficultySettings> difficultySettingsList;
+    
+    private HashSet<NewsData> usedNewsSet = new HashSet<NewsData>();
 
     private void Awake()
     {
@@ -45,7 +48,7 @@ public class NewsManager : MonoBehaviour
         List<NewsData> fakeNewsOnRound = new List<NewsData>();
         foreach (var news in newsCollection.falseNews)
         {
-            if (news.tier >= roundParams.minTierPerRound && news.tier <= roundParams.maxTierPerRound)
+            if (!usedNewsSet.Contains(news) && news.tier >= roundParams.minTierPerRound && news.tier <= roundParams.maxTierPerRound)
             {
                 fakeNewsOnRound.Add(news);
             }
@@ -55,7 +58,7 @@ public class NewsManager : MonoBehaviour
         List<NewsData> realNewsOnRound = new List<NewsData>();
         foreach (var news in newsCollection.trueNews)
         {
-            if (news.tier >= roundParams.minTierPerRound && news.tier <= roundParams.maxTierPerRound)
+            if (!usedNewsSet.Contains(news) && news.tier >= roundParams.minTierPerRound && news.tier <= roundParams.maxTierPerRound)
             {
                 realNewsOnRound.Add(news);
             }
@@ -68,6 +71,10 @@ public class NewsManager : MonoBehaviour
         
         // Shuffle news of round
         ShuffleNewsList(selectedNewsOnRound);
+        foreach (var news in selectedNewsOnRound)
+        {
+            usedNewsSet.Add(news);
+        }
         
         return selectedNewsOnRound;
     }
