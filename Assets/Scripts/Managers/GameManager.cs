@@ -130,16 +130,16 @@ public class GameManager : MonoBehaviour
         reliability += credibilityToAdd;
         if (reliability >= 100f) reliability = 100f;
         
-        // If close to 0 it was very fast round, if close to 1 it took exactly roundTimeBonus, if bigger than 1 then it took to long, so no bonus
-        float timeUsedFraction = _roundTimer / roundTimeBonus;
-        // Invert timeUsedFraction to get a high bonus in case player took a short time, and a small bonus if player took long time
-        float invertedTimeUsedFraction = 1.0f - timeUsedFraction;
-        // Clamp the value between 0 and 1 to take the bonus
-        float speedBonus = Mathf.Clamp(invertedTimeUsedFraction, 0.1f, 1.0f);
-        // Popularity is based on incorrectNews and the factor of bonus (Clickbait makes people more morbid)
-        int followers = Mathf.RoundToInt(followersToAdd * speedBonus);
+        // // If close to 0 it was very fast round, if close to 1 it took exactly roundTimeBonus, if bigger than 1 then it took to long, so no bonus
+        // float timeUsedFraction = _roundTimer / roundTimeBonus;
+        // // Invert timeUsedFraction to get a high bonus in case player took a short time, and a small bonus if player took long time
+        // float invertedTimeUsedFraction = 1.0f - timeUsedFraction;
+        // // Clamp the value between 0 and 1 to take the bonus
+        // float speedBonus = Mathf.Clamp(invertedTimeUsedFraction, 0.1f, 1.0f);
+        // // Popularity is based on incorrectNews and the factor of bonus (Clickbait makes people more morbid)
+        // int followers = Mathf.RoundToInt(followersToAdd * speedBonus);
         
-        popularity += followers;
+        popularity += followersToAdd;
 
         if (reliability < 0f)
         {
