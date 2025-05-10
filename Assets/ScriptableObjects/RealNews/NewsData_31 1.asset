@@ -18,3 +18,5 @@ MonoBehaviour:
   tier: 2
   image: {fileID: 21300000, guid: 5db457469a3ca8a49a503fd3cff35c56, type: 3}
   isReal: 1
+  followersGained: 40
+  credibilityGained: 5
