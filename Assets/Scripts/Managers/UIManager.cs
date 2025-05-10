@@ -48,6 +48,12 @@ public class UIManager : MonoBehaviour
 
     private bool gameStarted = false;
 
+    public event Action OnGameTimeEnded;
+
+    [Header("Game End")] 
+    public GameObject gameEndPanel;
+    public TextMeshProUGUI gameEndText;
+
     private void Awake()
     {
         actualPostList = new List<UINewsBehaviour>();
@@ -69,12 +75,16 @@ public class UIManager : MonoBehaviour
 
         float gameMinutesPassed = Mathf.Min((elapsedTimeRealSeconds / totalGameDurationRealSeconds) * gameTimeInMinutes, gameTimeInMinutes);
         
+        if (elapsedTimeRealSeconds >= totalGameDurationRealSeconds)
+        {
+            OnGameTimeEnded?.Invoke();
+        }
+
         int baseHour = 8;
         int totalMinutes = (int)gameMinutesPassed;
         int hours = baseHour + (totalMinutes / 60);
         int minutes = totalMinutes % 60;
-
-        // Asegurarse de que las horas estén en formato 24h
+        
         hours = hours % 24;
 
         hoursTxt.text = hours.ToString("D2");
@@ -209,4 +219,9 @@ public class UIManager : MonoBehaviour
         credibility.text = actualCredibility.ToString();
     }
 
+    public void ShowEndGamePanel(bool win)
+    {
+        gameEndPanel.SetActive(true);
+        gameEndText.text = win ? "¡Finalizaste tu jornada de trabajo con éxito!" : "¡El FBI te ha detenido por desinformar a la población";
+    }
 }
