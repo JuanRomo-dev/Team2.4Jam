@@ -2269,25 +2269,60 @@ MonoBehaviour:
   newsCollection: {fileID: 11400000, guid: 87d4c9cda6e334448a4166cdeb41e794, type: 2}
   difficultySettingsList:
   - minNewsPerRound: 8
-    maxNewsPerRound: 10
-    fakeNewsRatio: 0.4
-    minTierPerRound: 1
-    maxTierPerRound: 1
-  - minNewsPerRound: 10
-    maxNewsPerRound: 12
+    maxNewsPerRound: 8
     fakeNewsRatio: 0.5
     minTierPerRound: 1
-    maxTierPerRound: 2
-  - minNewsPerRound: 12
-    maxNewsPerRound: 14
+    maxTierPerRound: 1
+  - minNewsPerRound: 4
+    maxNewsPerRound: 4
+    fakeNewsRatio: 0.5
+    minTierPerRound: 1
+    maxTierPerRound: 1
+  - minNewsPerRound: 4
+    maxNewsPerRound: 4
+    fakeNewsRatio: 0.5
+    minTierPerRound: 1
+    maxTierPerRound: 1
+  - minNewsPerRound: 4
+    maxNewsPerRound: 4
     fakeNewsRatio: 0.6
     minTierPerRound: 1
     maxTierPerRound: 2
-  - minNewsPerRound: 12
-    maxNewsPerRound: 16
-    fakeNewsRatio: 0.7
+  - minNewsPerRound: 4
+    maxNewsPerRound: 4
+    fakeNewsRatio: 0.6
+    minTierPerRound: 1
+    maxTierPerRound: 2
+  - minNewsPerRound: 4
+    maxNewsPerRound: 4
+    fakeNewsRatio: 0.6
+    minTierPerRound: 1
+    maxTierPerRound: 2
+  - minNewsPerRound: 4
+    maxNewsPerRound: 4
+    fakeNewsRatio: 0.6
     minTierPerRound: 2
-    maxTierPerRound: 3
+    maxTierPerRound: 2
+  - minNewsPerRound: 4
+    maxNewsPerRound: 4
+    fakeNewsRatio: 0.6
+    minTierPerRound: 2
+    maxTierPerRound: 2
+  - minNewsPerRound: 4
+    maxNewsPerRound: 4
+    fakeNewsRatio: 0.6
+    minTierPerRound: 2
+    maxTierPerRound: 2
+  - minNewsPerRound: 4
+    maxNewsPerRound: 4
+    fakeNewsRatio: 0.6
+    minTierPerRound: 2
+    maxTierPerRound: 2
+  - minNewsPerRound: 4
+    maxNewsPerRound: 4
+    fakeNewsRatio: 0.6
+    minTierPerRound: 2
+    maxTierPerRound: 2
 --- !u!1 &583531121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2576,9 +2611,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualView: 2
-  transitionDurations: 0.5
-  entryTransitionDelay: 0.5
-  roomTransitionDelay: 0.1
+  transitionDurations: 1
+  entryTransitionDelay: 0
+  roomTransitionDelay: 0
   pcViewTransform: {fileID: 2142252248}
   roomViewTransform: {fileID: 819403952}
   entryViewTransform: {fileID: 743407520}
