@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class NewsDragger : MonoBehaviour
 {
-    public GameObject postsNewsList;
+    public GameObject postsNewsScrollGameObject;
+
+    public UIManager uiManager;
 
     public void Start()
     {
-        if(postsNewsList == null)
+        uiManager = GetComponent<UIManager>();
+
+        if(postsNewsScrollGameObject == null)
         {
             Debug.Log("Add the post list GO to the UI MANAGER");
         }
@@ -17,15 +21,19 @@ public class NewsDragger : MonoBehaviour
 
     public void AddNewPost(GameObject prompToAdd)
     {
-        if(prompToAdd != null && postsNewsList != null)
+        if(prompToAdd != null && postsNewsScrollGameObject != null)
         {
-            GameObject postCloned = Instantiate(prompToAdd, postsNewsList.transform);
+            //GameObject postCloned = Instantiate(prompToAdd, postsNewsList.transform);
             
-            Button btn = postCloned.GetComponent<Button>();
-            if(btn != null) btn.interactable = false;
+            //Button btn = postCloned.GetComponent<Button>();
+            //if(btn != null) btn.interactable = false;
             
-            prompToAdd.SetActive(false);
-            GameManager.Instance.addPromptToPostList(prompToAdd.GetComponent<UINewsBehaviour>().newsData);
+            //prompToAdd.SetActive(false);
+            //GameManager.Instance.addPromptToPostList(prompToAdd.GetComponent<UINewsBehaviour>().newsData);
+
+            prompToAdd.transform.SetParent(postsNewsScrollGameObject.transform);
+            uiManager.ChangePrompToPost(prompToAdd.GetComponent<UINewsBehaviour>());
+        
         }
         else
         {

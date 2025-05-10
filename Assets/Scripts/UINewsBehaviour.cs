@@ -37,7 +37,6 @@ public class UINewsBehaviour : MonoBehaviour
 
     public void EndRound()
     {
-        //TODO: Demostrar si era de verdad o de mentira
         if(isReal)
         {
             headline.color = Color.green;

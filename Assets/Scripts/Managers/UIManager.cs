@@ -11,7 +11,8 @@ public class UIManager : MonoBehaviour
     [Space(10)]
     public GameObject newsPrefab;
     public GameObject prompList;
-    private List<UINewsBehaviour> actualNewsList;
+    private List<UINewsBehaviour> actualPrompList;
+    private List<UINewsBehaviour> actualPostList;
 
     [Header("ROOM VIEW ASSETS")]
     [Space(10)]
@@ -46,7 +47,8 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        actualNewsList = new List<UINewsBehaviour>();
+        actualPostList = new List<UINewsBehaviour>();
+        actualPrompList = new List<UINewsBehaviour>();
         credibility.text = "100";
         followers.text = "0";
     }
@@ -79,7 +81,7 @@ public class UIManager : MonoBehaviour
 
             newPrompt.SetInformation(newNewsList[i]);
 
-            actualNewsList.Add(newPrompt);
+            actualPrompList.Add(newPrompt);
         }
 
         gameStarted = true;
@@ -93,22 +95,30 @@ public class UIManager : MonoBehaviour
         CleanPrompList();
     }
 
+    public void ChangePrompToPost(UINewsBehaviour prompToChange)
+    {
+        actualPostList.Add(prompToChange);
+        actualPrompList.Remove(prompToChange);
+    }
+
     //Limpiar la bandeja de promps de noticias, poniendo cuales eran verdaderas y cuales eran falsas. 
     private void CleanPrompList()
     {
-        for (int i = 0; i < actualNewsList.Count; i++)
+        for (int i = 0; i < actualPrompList.Count; i++)
         {
-            actualNewsList[i].EndRound();
-            Destroy(actualNewsList[i].gameObject);
+            //Desactivar las tarjetas de la lista de prompts 
+            actualPrompList[i].gameObject.SetActive(false);
         }
-        actualNewsList.Clear();
+
+        actualPrompList.Clear();
     }
 
+    //Call the posts list to reveal reality on REAL/FAKE
     private void RevealReality()
     {
-        for (int i = 0; i < actualNewsList.Count; i++)
+        for (int i = 0; i < actualPostList.Count; i++)
         {
-            actualNewsList[i].EndRound();
+            actualPostList[i].EndRound();
         }
     }
 

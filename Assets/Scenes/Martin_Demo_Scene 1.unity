@@ -6157,7 +6157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f192b3519ec3424088b6865d90e61ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postsNewsList: {fileID: 869033674}
+  postsNewsScrollGameObject: {fileID: 869033674}
+  uiManager: {fileID: 1666745614}
 --- !u!4 &1666745613
 Transform:
   m_ObjectHideFlags: 0
