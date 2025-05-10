@@ -51,9 +51,9 @@ public class UIManager : MonoBehaviour
 
     public event Action OnGameTimeEnded;
 
-    // [Header("Game End")] 
-    // public GameObject gameOverPanel;
-    // public GameObject winPanel;
+    [Header("Game End")]
+    public GameObject gameOverPanel;
+    public GameObject winPanel;
 
     private void Awake()
     {
@@ -229,9 +229,9 @@ public class UIManager : MonoBehaviour
     
     public void ShowEndGamePanel(bool win)
     {
-        // if (win)
-        //     winPanel.SetActive(true);
-        // else
-        //     gameOverPanel.SetActive(true);
+        if (win)
+            winPanel.SetActive(true);
+        else
+            gameOverPanel.SetActive(true);
     }
 }
