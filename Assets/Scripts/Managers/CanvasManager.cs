@@ -21,12 +21,12 @@ public class CanvasManager : MonoBehaviour
     {
         Sequence seq = DOTween.Sequence();
 
-        seq.AppendInterval(delayBeforeFade) // Wait 1 second
+        seq.AppendInterval(0f) // Wait 1 second
            .AppendCallback(() => {
                title.SetActive(false);
                buttons.SetActive(false);
            })
-           .AppendInterval(0.5f) // Wait 
+           .AppendInterval(0f) // Wait 
            .Append(canvasGroup.DOFade(0f, fadeDuration).SetEase(Ease.InOutSine))
            .AppendCallback(() => {
                canvasGroup.interactable = false;

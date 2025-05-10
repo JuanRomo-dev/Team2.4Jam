@@ -11,6 +11,9 @@ public class InputManager : MonoBehaviour
         if (camaraTransitionsManager.actualView == CamaraTransitions.VIEWS.ENTRY_VIEW)
             return;
 
+        if (GameManager.Instance.currentGameState == GameState.Start)
+            return;
+
         if(Input.GetKeyDown(KeyCode.A))
         {
             camaraTransitionsManager.ChangeView(CamaraTransitions.VIEWS.ROOM_VIEW); 
