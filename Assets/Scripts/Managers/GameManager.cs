@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public GameState currentGameState = GameState.Start;
 
+    public UIManager uiManager;
+
     [Header("Game Metrics")]
     public float gameTime = 180f;   // 3 minutes in seconds
     [Range(0, 100f)]
@@ -49,7 +51,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _timer = gameTime;
-        LoadCaptcha();
     }
     
     // Update is called once per frame
@@ -68,12 +69,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void LoadCaptcha()
-    {
-        currentGameState = GameState.Captcha;
-    }
-
-    void OnCaptchaCompleted()
+    public void OnCaptchaCompleted()
     {
         StartRound();
     }
@@ -89,6 +85,8 @@ public class GameManager : MonoBehaviour
         
         // Clean selectes news for submit on new round
         selectedNewsList = new List<NewsData>();
+
+        uiManager.ReceiveNewsList(selectedNewsList);
     }
 
     void SubmitRound()
@@ -124,6 +122,8 @@ public class GameManager : MonoBehaviour
             // Start new round after 1 second
             Invoke(nameof(StartRound), 1f);
         }
+
+        uiManager.EndRound(popularity, reliability);
     }
     
     void EndGame(bool win)
