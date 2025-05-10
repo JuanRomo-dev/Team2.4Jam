@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
+  m_Name: NewsData_24
+  m_EditorClassIdentifier: 
+  headline: "Combatientes talibanes, aburridos del trabajo de oficina, a\xF1oran
+    \u201Clos d\xEDas de la yihad\u201D"
+  tier: 2
+  image: {fileID: 21300000, guid: fb5e3274841359e4c964934b52f5fba2, type: 3}
+  isReal: 1
