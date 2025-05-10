@@ -128,6 +128,7 @@ public class GameManager : MonoBehaviour
         }
         
         reliability += credibilityToAdd;
+        if (reliability >= 100f) reliability = 100f;
         
         // If close to 0 it was very fast round, if close to 1 it took exactly roundTimeBonus, if bigger than 1 then it took to long, so no bonus
         float timeUsedFraction = _roundTimer / roundTimeBonus;
