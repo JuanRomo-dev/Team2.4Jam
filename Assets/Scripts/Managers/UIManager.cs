@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,7 +42,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI minutesTxt;
     public float timeAccelerationRate = 4f;
 
-    private float gameTimeInMinutes = 8 * 60; // Start at 08:00 (8 hours * 60 mins)
+    private float totalGameDurationRealSeconds = 180f;  // Total time of game is 3 minutes (180 seconds)
+    private float elapsedTimeRealSeconds = 0f;
+    private float gameTimeInMinutes = 540f; // 9 hours of game time, so 540 minutes
 
     private bool gameStarted = false;
 
@@ -59,13 +62,21 @@ public class UIManager : MonoBehaviour
             return;
 
         // Advance game time
-        gameTimeInMinutes += Time.deltaTime * (timeAccelerationRate / 60f);
+        if (elapsedTimeRealSeconds < totalGameDurationRealSeconds)
+        {
+            elapsedTimeRealSeconds += Time.deltaTime;
+        }
 
-        // Clamp to 24-hour format
-        int hours = ((int)gameTimeInMinutes / 60) % 24;
-        int minutes = ((int)gameTimeInMinutes % 60);
+        float gameMinutesPassed = Mathf.Min((elapsedTimeRealSeconds / totalGameDurationRealSeconds) * gameTimeInMinutes, gameTimeInMinutes);
+        
+        int baseHour = 8;
+        int totalMinutes = (int)gameMinutesPassed;
+        int hours = baseHour + (totalMinutes / 60);
+        int minutes = totalMinutes % 60;
 
-        // Update UI
+        // Asegurarse de que las horas estén en formato 24h
+        hours = hours % 24;
+
         hoursTxt.text = hours.ToString("D2");
         minutesTxt.text = minutes.ToString("D2");
     }
