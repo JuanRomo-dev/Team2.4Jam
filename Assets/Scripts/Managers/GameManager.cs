@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         currentGameState = GameState.RoundEnded;
 
         int followersToAdd = 0;
-        int credibilityToAdd = 0;
+        float credibilityToAdd = 0;
         
         int correctNews = 0;
         int incorrectNews = 0;

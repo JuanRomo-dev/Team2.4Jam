@@ -12,5 +12,5 @@ public class NewsData : ScriptableObject
     public Sprite image;
     public bool isReal;
     public int followersGained;
-    public int credibilityGained;
+    public float credibilityGained;
 }
