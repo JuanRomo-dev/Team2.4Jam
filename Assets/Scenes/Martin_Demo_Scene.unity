@@ -1683,7 +1683,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newsCollection: {fileID: 11400000, guid: 87d4c9cda6e334448a4166cdeb41e794, type: 2}
-  difficultySettingsList: []
+  difficultySettingsList:
+  - minNewsPerRound: 8
+    maxNewsPerRound: 10
+    fakeNewsRatio: 0.4
+    minTierPerRound: 1
+    maxTierPerRound: 1
+  - minNewsPerRound: 10
+    maxNewsPerRound: 12
+    fakeNewsRatio: 0.5
+    minTierPerRound: 1
+    maxTierPerRound: 2
+  - minNewsPerRound: 12
+    maxNewsPerRound: 14
+    fakeNewsRatio: 0.6
+    minTierPerRound: 1
+    maxTierPerRound: 2
+  - minNewsPerRound: 12
+    maxNewsPerRound: 16
+    fakeNewsRatio: 0.7
+    minTierPerRound: 2
+    maxTierPerRound: 3
 --- !u!1 &583531121
 GameObject:
   m_ObjectHideFlags: 0
