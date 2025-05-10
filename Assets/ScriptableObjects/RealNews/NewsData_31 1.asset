@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
-  m_Name: NewsData_7
+  m_Name: NewsData_31 1
   m_EditorClassIdentifier: 
-  headline: "Cient\xEDficos logran revivir tejido cerebral 30 horas despu\xE9s de
-    la muerte"
+  headline: "Un f\xEDsico franc\xE9s hace creer al mundo que realiz\xF3 la fotograf\xEDa
+    m\xE1s precisa de la estrella Pr\xF3xima Centauri, que result\xF3 ser solo un
+    trozo de chorizo"
   tier: 2
-  image: {fileID: 21300000, guid: ac12d601229f57b44a4bc7b5d5680a55, type: 3}
-  isReal: 0
+  image: {fileID: 21300000, guid: 5db457469a3ca8a49a503fd3cff35c56, type: 3}
+  isReal: 1

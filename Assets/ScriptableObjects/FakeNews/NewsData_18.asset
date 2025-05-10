@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
-  m_Name: NewsData_7
+  m_Name: NewsData_18
   m_EditorClassIdentifier: 
-  headline: "Cient\xEDficos logran revivir tejido cerebral 30 horas despu\xE9s de
-    la muerte"
+  headline: "Productoras Hollywoodienses compran los derechos de imagen de actores
+    actuales para reconstruirlos mediante CGI en pel\xEDculas futuras."
   tier: 2
-  image: {fileID: 21300000, guid: ac12d601229f57b44a4bc7b5d5680a55, type: 3}
+  image: {fileID: 21300000, guid: 63d65f5b8d6df4b4ebd20cc7a54ccdc7, type: 3}
   isReal: 0

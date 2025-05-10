@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
-  m_Name: NewsData_7
+  m_Name: NewsData_14
   m_EditorClassIdentifier: 
-  headline: "Cient\xEDficos logran revivir tejido cerebral 30 horas despu\xE9s de
-    la muerte"
+  headline: "El iPhone 16 estar\xE1 equipado con una IA capaz de detectar mentiras
+    en mensajes, audios y llamadas, como parte de una campa\xF1a contra el maltrato."
   tier: 2
-  image: {fileID: 21300000, guid: ac12d601229f57b44a4bc7b5d5680a55, type: 3}
+  image: {fileID: 21300000, guid: a7d568be5f200e54f944eadae95c254b, type: 3}
   isReal: 0

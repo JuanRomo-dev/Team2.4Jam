@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
   m_Name: NewsData_28
   m_EditorClassIdentifier: 
-  headline: "Nace el primer beb\xE9 con ADN de tres personas gracias a una t\xE9cnica
-    de vanguardia"
+  headline: Acusaciones de encubrir abusos sexuales persiguen al nuevo Papa.
   tier: 2
-  image: {fileID: 21300000, guid: 49991a56c4f3ba947b602fdaf7236cdd, type: 3}
+  image: {fileID: 21300000, guid: 6cd1fee3cc0cacb479b87babed983162, type: 3}
   isReal: 1

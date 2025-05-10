@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
-  m_Name: NewsData_7
+  m_Name: NewsData_15
   m_EditorClassIdentifier: 
-  headline: "Cient\xEDficos logran revivir tejido cerebral 30 horas despu\xE9s de
-    la muerte"
+  headline: "Implantan el primer coraz\xF3n artificial a un ni\xF1o reci\xE9n nacido
+    para salvar su vida."
   tier: 2
-  image: {fileID: 21300000, guid: ac12d601229f57b44a4bc7b5d5680a55, type: 3}
+  image: {fileID: 21300000, guid: e1f1e681c91dde84ba1cd2f82956782d, type: 3}
   isReal: 0

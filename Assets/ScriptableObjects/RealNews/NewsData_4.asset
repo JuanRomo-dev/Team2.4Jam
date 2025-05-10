@@ -15,5 +15,5 @@ MonoBehaviour:
   headline: "El coche m\xE1s r\xE1pido del mundo: capaz de superar la velocidad del
     sonido"
   tier: 2
-  image: {fileID: 21300000, guid: 0b0f3fe69eae1fe4e89a22d9337e4c5d, type: 3}
+  image: {fileID: 21300000, guid: 457f799165229ff43a40896d5306d164, type: 3}
   isReal: 1

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
-  m_Name: NewsData_7
+  m_Name: NewsData_45
   m_EditorClassIdentifier: 
-  headline: "Cient\xEDficos logran revivir tejido cerebral 30 horas despu\xE9s de
-    la muerte"
-  tier: 2
-  image: {fileID: 21300000, guid: ac12d601229f57b44a4bc7b5d5680a55, type: 3}
+  headline: "Espa\xF1a implantar\xE1 un DNI digital con reconocimiento facial obligatorio
+    en 2028"
+  tier: 1
+  image: {fileID: 21300000, guid: 5a5330dfbd0826c48b29a980e09b7488, type: 3}
   isReal: 0

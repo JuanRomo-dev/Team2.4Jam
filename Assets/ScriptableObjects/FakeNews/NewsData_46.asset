@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
-  m_Name: NewsData_7
+  m_Name: NewsData_46
   m_EditorClassIdentifier: 
-  headline: "Cient\xEDficos logran revivir tejido cerebral 30 horas despu\xE9s de
-    la muerte"
-  tier: 2
-  image: {fileID: 21300000, guid: ac12d601229f57b44a4bc7b5d5680a55, type: 3}
+  headline: "Christopher Nolan dirigir\xE1 una trilog\xEDa inspirada en la vida de
+    Leonardo Da Vinci para Netflix"
+  tier: 1
+  image: {fileID: 21300000, guid: 7af52ae0004d7374589a74d389e66fea, type: 3}
   isReal: 0
