@@ -156,7 +156,8 @@ public class GameManager : MonoBehaviour
     void EndGame(bool win)
     {
         currentGameState = win ? GameState.GameWon : GameState.GameOver;
-        // uiManager.ShowEndGamePanel(win);
+        
+        uiManager.ShowEndGamePanel(win);
         
         Time.timeScale = 0f;
     }

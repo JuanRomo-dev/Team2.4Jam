@@ -44,7 +44,7 @@ public class CanvasManager : MonoBehaviour
 
     public void ResetScene()
     {
-        SceneManager.LoadScene("GameplayScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
