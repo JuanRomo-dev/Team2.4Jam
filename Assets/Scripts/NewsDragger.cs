@@ -23,17 +23,10 @@ public class NewsDragger : MonoBehaviour
     {
         if(prompToAdd != null && postsNewsScrollGameObject != null)
         {
-            //GameObject postCloned = Instantiate(prompToAdd, postsNewsList.transform);
-            
-            //Button btn = postCloned.GetComponent<Button>();
-            //if(btn != null) btn.interactable = false;
-            
-            //prompToAdd.SetActive(false);
-            //GameManager.Instance.addPromptToPostList(prompToAdd.GetComponent<UINewsBehaviour>().newsData);
-
             prompToAdd.transform.SetParent(postsNewsScrollGameObject.transform);
+            prompToAdd.transform.SetSiblingIndex(0);
+
             uiManager.ChangePrompToPost(prompToAdd.GetComponent<UINewsBehaviour>());
-        
         }
         else
         {

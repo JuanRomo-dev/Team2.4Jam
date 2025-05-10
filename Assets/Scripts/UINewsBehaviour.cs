@@ -12,6 +12,10 @@ public class UINewsBehaviour : MonoBehaviour
 
     public NewsData newsData;
 
+    public GameObject postAddons;
+    public TextMeshProUGUI followersGained;
+    public TextMeshProUGUI credibilityGained;
+
     public Image image;
     public TextMeshProUGUI headline;
     public bool isReal;
@@ -45,11 +49,22 @@ public class UINewsBehaviour : MonoBehaviour
         {
             headline.color = Color.red;
         }
+
+        Color followerGainedColor = newsData.followersGained > 0 ? Color.green : Color.red;
+        Color credibilityGainedColor = newsData.credibilityGained > 0 ? Color.green : Color.red;
+
+        followersGained.color = followerGainedColor;
+        followersGained.text = newsData.followersGained.ToString();
+
+        credibilityGained.color = credibilityGainedColor;
+        credibilityGained.text = newsData.credibilityGained.ToString();
     }
 
     public void ChangeColumns()
     {
         newsDragger.AddNewPost(this.gameObject);
+
+        postAddons.SetActive(true);
 
         Debug.Log("clicking...");
     }

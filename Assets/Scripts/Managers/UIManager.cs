@@ -51,8 +51,8 @@ public class UIManager : MonoBehaviour
     public event Action OnGameTimeEnded;
 
     [Header("Game End")] 
-    public GameObject gameEndPanel;
-    public TextMeshProUGUI gameEndText;
+    public GameObject gameOverPanel;
+    public GameObject winPanel;
 
     private void Awake()
     {
@@ -221,7 +221,9 @@ public class UIManager : MonoBehaviour
 
     public void ShowEndGamePanel(bool win)
     {
-        gameEndPanel.SetActive(true);
-        gameEndText.text = win ? "¡Finalizaste tu jornada de trabajo con éxito!" : "¡El FBI te ha detenido por desinformar a la población";
+        if (win)
+            winPanel.SetActive(true);
+        else
+            gameOverPanel.SetActive(true);
     }
 }
