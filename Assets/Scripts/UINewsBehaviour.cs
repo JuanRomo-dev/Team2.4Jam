@@ -43,15 +43,20 @@ public class UINewsBehaviour : MonoBehaviour
     {
         if(isReal)
         {
-            headline.color = Color.green;
+            headline.color = new Color(28f / 255f, 120f / 255f, 49f / 255f);
         }
         else
         {
             headline.color = Color.red;
         }
 
-        Color followerGainedColor = newsData.followersGained > 0 ? Color.green : Color.red;
-        Color credibilityGainedColor = newsData.credibilityGained > 0 ? Color.green : Color.red;
+        Color followerGainedColor = newsData.followersGained > 0 
+            ? new Color32(28, 120, 49, 255) 
+            : Color.red;
+
+        Color credibilityGainedColor = newsData.credibilityGained > 0 
+            ? new Color32(28, 120, 49, 255) 
+            : Color.red;
 
         followersGained.color = followerGainedColor;
         followersGained.text = newsData.followersGained.ToString();

@@ -1352,6 +1352,7 @@ Transform:
   - {fileID: 458933034}
   - {fileID: 1729635344}
   - {fileID: 436301833}
+  - {fileID: 505495641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &428130545
@@ -1754,6 +1755,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camaraTransitionsManager: {fileID: 660188120}
+--- !u!4 &505495641 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dbb9baa007b565a4b8fc28ceda71aa58, type: 3}
+  m_PrefabInstance: {fileID: 632341260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &543708628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,11 +2217,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 424220513}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: dbb9baa007b565a4b8fc28ceda71aa58, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.61479336
+      value: 0.6147934
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dbb9baa007b565a4b8fc28ceda71aa58, type: 3}
       propertyPath: m_LocalScale.y
@@ -2223,7 +2229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dbb9baa007b565a4b8fc28ceda71aa58, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.61479336
+      value: 0.6147934
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dbb9baa007b565a4b8fc28ceda71aa58, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5908,6 +5914,8 @@ MonoBehaviour:
   hoursTxt: {fileID: 1612503798}
   minutesTxt: {fileID: 434286662}
   timeAccelerationRate: 100
+  gameOverPanel: {fileID: 0}
+  winPanel: {fileID: 0}
 --- !u!1 &1707775636
 GameObject:
   m_ObjectHideFlags: 0
@@ -7306,4 +7314,3 @@ SceneRoots:
   - {fileID: 341536365}
   - {fileID: 1484950214}
   - {fileID: 1272739335}
-  - {fileID: 632341260}
