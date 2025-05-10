@@ -44,21 +44,21 @@ public class NewsManager : MonoBehaviour
         int numFakeNewsOnRound = Mathf.RoundToInt(totalNewsOnRound * roundParams.fakeNewsRatio);
         int numRealNewsOnRound = totalNewsOnRound - numFakeNewsOnRound;
 
-        // Get fake news given the tier
+        // Get fake news
         List<NewsData> fakeNewsOnRound = new List<NewsData>();
         foreach (var news in newsCollection.falseNews)
         {
-            if (!usedNewsSet.Contains(news) && news.tier >= roundParams.minTierPerRound && news.tier <= roundParams.maxTierPerRound)
+            if (!usedNewsSet.Contains(news))
             {
                 fakeNewsOnRound.Add(news);
             }
         }
         
-        // Get real news given the tier
+        // Get real news
         List<NewsData> realNewsOnRound = new List<NewsData>();
         foreach (var news in newsCollection.trueNews)
         {
-            if (!usedNewsSet.Contains(news) && news.tier >= roundParams.minTierPerRound && news.tier <= roundParams.maxTierPerRound)
+            if (!usedNewsSet.Contains(news))
             {
                 realNewsOnRound.Add(news);
             }
