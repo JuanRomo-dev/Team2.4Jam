@@ -102,12 +102,16 @@ public class GameManager : MonoBehaviour
         int correctNews = 0;
         int incorrectNews = 0;
 
-        foreach (var news in currentNewsList)
+        
+        selectedNewsList = uiManager.postListData;
+        print("selected news size" + selectedNewsList.Count);
+        foreach (var news in selectedNewsList)
         {
             if (news.isReal) correctNews++;
             else incorrectNews++;
             followersToAdd += news.followersGained;
             credibilityToAdd += news.credibilityGained;
+            print("followers: " + followersToAdd + ", credibility: " + credibilityToAdd);
         }
         
         reliability += credibilityToAdd;
@@ -129,6 +133,7 @@ public class GameManager : MonoBehaviour
         } else {
             // Start new round after 1 second
             Invoke(nameof(StartRound), 1f);
+            selectedNewsList.Clear();
         }
 
         uiManager.EndRound(popularity, reliability);
@@ -137,7 +142,7 @@ public class GameManager : MonoBehaviour
     void EndGame(bool win)
     {
         currentGameState = win ? GameState.GameWon : GameState.GameOver;
-        uiManager.ShowEndGamePanel(win);
+        // uiManager.ShowEndGamePanel(win);
         
         Time.timeScale = 0f;
     }

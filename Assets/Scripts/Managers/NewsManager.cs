@@ -22,7 +22,7 @@ public class NewsManager : MonoBehaviour
 
     public List<DifficultySettings> difficultySettingsList;
     
-    private HashSet<NewsData> usedNewsSet = new HashSet<NewsData>();
+    public HashSet<NewsData> usedNewsSet = new HashSet<NewsData>();
 
     private void Awake()
     {

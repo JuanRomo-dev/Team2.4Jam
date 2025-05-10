@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public GameObject prompList;
     private List<UINewsBehaviour> actualPrompList;
     private List<UINewsBehaviour> actualPostList;
+    public List<NewsData> postListData;
 
     [Header("ROOM VIEW ASSETS")]
     [Space(10)]
@@ -50,14 +51,15 @@ public class UIManager : MonoBehaviour
 
     public event Action OnGameTimeEnded;
 
-    [Header("Game End")] 
-    public GameObject gameOverPanel;
-    public GameObject winPanel;
+    // [Header("Game End")] 
+    // public GameObject gameOverPanel;
+    // public GameObject winPanel;
 
     private void Awake()
     {
         actualPostList = new List<UINewsBehaviour>();
         actualPrompList = new List<UINewsBehaviour>();
+        postListData = new List<NewsData>();
         credibility.text = "100";
         followers.text = "0";
     }
@@ -119,6 +121,7 @@ public class UIManager : MonoBehaviour
     public void ChangePrompToPost(UINewsBehaviour prompToChange)
     {
         actualPostList.Add(prompToChange);
+        postListData.Add(prompToChange.newsData);
         actualPrompList.Remove(prompToChange);
     }
 
@@ -221,9 +224,9 @@ public class UIManager : MonoBehaviour
 
     public void ShowEndGamePanel(bool win)
     {
-        if (win)
-            winPanel.SetActive(true);
-        else
-            gameOverPanel.SetActive(true);
+        // if (win)
+        //     winPanel.SetActive(true);
+        // else
+        //     gameOverPanel.SetActive(true);
     }
 }

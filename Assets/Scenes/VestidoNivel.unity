@@ -5922,6 +5922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newsPrefab: {fileID: 2768604173806751222, guid: 114c2bc0e4c451946a4cad47babb715d, type: 3}
   prompList: {fileID: 2044450716}
+  postListData: []
   followers: {fileID: 692019593}
   credibility: {fileID: 1090585916}
   followersArrow: {fileID: 804439545}
@@ -5934,8 +5935,6 @@ MonoBehaviour:
   hoursTxt: {fileID: 1612503798}
   minutesTxt: {fileID: 434286662}
   timeAccelerationRate: 100
-  gameOverPanel: {fileID: 0}
-  winPanel: {fileID: 0}
 --- !u!1 &1707775636
 GameObject:
   m_ObjectHideFlags: 0
