@@ -22,6 +22,7 @@ public class UINewsBehaviour : MonoBehaviour
         newsDragger.AddNewPost(this.gameObject);
 
         Debug.Log("clicking...");
-        
     }
+
+
 }
