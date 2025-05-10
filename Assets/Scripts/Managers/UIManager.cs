@@ -8,13 +8,13 @@ public class UIManager : MonoBehaviour
 {
 
     [Header("PC VIEW ASSETS")]
-
+    [Space(10)]
     public GameObject newsPrefab;
     public GameObject prompList;
     private List<UINewsBehaviour> actualNewsList;
 
     [Header("ROOM VIEW ASSETS")]
-
+    [Space(10)]
     public TextMeshProUGUI followers;
     public TextMeshProUGUI credibility;
 
@@ -24,9 +24,17 @@ public class UIManager : MonoBehaviour
     private float actualFollowers;
     private float actualCredibility;
 
+    [Header("Arrows")]
+    [Space(10)]
+
     public Sprite arrowSUPER;
     public Sprite arrowUP;
+    public Sprite arrowEQUAL;
     public Sprite arrowDOWN;
+    public Sprite arrowSADGE;
+
+    [Header("Hour")]
+    [Space(10)]
 
     public TextMeshProUGUI hoursTxt;
     public TextMeshProUGUI minutesTxt;
@@ -100,6 +108,8 @@ public class UIManager : MonoBehaviour
 
     private void CheckCountersUpdate(float newFollowers, float newCredibility)
     {
+        //FOLLOWERS CHECK
+
         if(actualFollowers == 0)
         {
             actualFollowers = newFollowers;
@@ -119,6 +129,11 @@ public class UIManager : MonoBehaviour
                 //UP ARROW
                 followersArrow.sprite = arrowUP;
             }
+            else if (deltaFollowers <= -5)
+            {
+                //SADGE ARROW
+                followersArrow.sprite = arrowSADGE;
+            }
             else if (deltaFollowers <= 0)
             {
                 //DOWN ARROW
@@ -126,10 +141,12 @@ public class UIManager : MonoBehaviour
             }
         }
 
+        //CREDIBILITY CHECK
+
         if (actualCredibility == 0)
         {
             actualCredibility = newCredibility;
-            CredibilityArrow.sprite = arrowUP;
+            CredibilityArrow.sprite = arrowDOWN;
         }
         else
         {
@@ -137,18 +154,18 @@ public class UIManager : MonoBehaviour
 
             if (deltaCredibility >= 10)
             {
-                //DOWN ARROW
-                CredibilityArrow.sprite = arrowDOWN;
+                //SADGE ARROW
+                CredibilityArrow.sprite = arrowSADGE;
             }
             else if (deltaCredibility >= 5)
             {
-                //UP ARROW
-                CredibilityArrow.sprite = arrowUP;
+                //DOWN ARROW
+                CredibilityArrow.sprite = arrowDOWN;
             }
-            else if (deltaCredibility <= 0)
+            else if (deltaCredibility == 0)
             {
-                //SUPER ARROW
-                CredibilityArrow.sprite = arrowSUPER;
+                //EQUAL ARROW
+                CredibilityArrow.sprite = arrowEQUAL;
             }
         }
 
