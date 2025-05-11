@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1174499d997e1ff46ae53d2e120ea0df, type: 3}
   m_Name: SFX_List
   m_EditorClassIdentifier: 
-  soundEffects: []
+  soundEffects:
+  - SFX: {fileID: 0}
+    type: 0

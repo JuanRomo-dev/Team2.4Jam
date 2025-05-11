@@ -12,6 +12,11 @@ public class UINewsBehaviour : MonoBehaviour
 
     public NewsData newsData;
 
+    public Image newsBG;
+
+    public Sprite prompBG;
+    public Sprite postBG;
+
     public GameObject postAddons;
     public TextMeshProUGUI followersGained;
     public TextMeshProUGUI credibilityGained;
@@ -20,9 +25,15 @@ public class UINewsBehaviour : MonoBehaviour
     public TextMeshProUGUI headline;
     public bool isReal;
 
+    private TypeWriterEffect writingEffect;
+
     // Start is called before the first frame update
     void Awake()
     {
+        newsBG.sprite = prompBG;
+
+        writingEffect = GetComponent<TypeWriterEffect>();
+
         GameObject uiManager = GameObject.Find("UIManager");
 
         newsDragger = uiManager.GetComponent<NewsDragger>();
@@ -43,6 +54,8 @@ public class UINewsBehaviour : MonoBehaviour
         image.sprite = newsData.image;
         headline.text = newsData.headline;
         isReal = newsData.isReal;
+
+        writingEffect.StartTyping(newsData.headline);
     }
 
     public void EndRound()
@@ -76,6 +89,8 @@ public class UINewsBehaviour : MonoBehaviour
         newsDragger.AddNewPost(this.gameObject);
 
         postAddons.SetActive(true);
+
+        newsBG.sprite = postBG;
 
         Debug.Log("clicking...");
     }

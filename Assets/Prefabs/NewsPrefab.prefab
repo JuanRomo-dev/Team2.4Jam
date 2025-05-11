@@ -100,7 +100,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 4642363546901116807}
   - component: {fileID: 934009615164300012}
   - component: {fileID: 127422603363843007}
+  - component: {fileID: 3848204947659984392}
   m_Layer: 5
   m_Name: NewsPrefab
   m_TagString: Untagged
@@ -309,7 +310,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 59.5689, y: 15.5466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5661027870471418627
 CanvasRenderer:
@@ -382,7 +383,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2768604173806751222}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -395,8 +396,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d1f5aeeae5b301d4ab3512e55c5d4a75, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -418,12 +419,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newsData: {fileID: 0}
+  newsBG: {fileID: 934009615164300012}
+  prompBG: {fileID: 21300000, guid: d1f5aeeae5b301d4ab3512e55c5d4a75, type: 3}
+  postBG: {fileID: 21300000, guid: 6aa5cda66689ed841846f29ddd9e13f0, type: 3}
   postAddons: {fileID: 8554536827769945988}
   followersGained: {fileID: 3589512401131178125}
   credibilityGained: {fileID: 8998969054889446917}
   image: {fileID: 4645086449763147452}
   headline: {fileID: 6235193503485321224}
   isReal: 0
+--- !u!114 &3848204947659984392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768604173806751222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9137bc52c2e5547baaa694bf99967a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 6235193503485321224}
+  typingSpeed: 0.00001
 --- !u!1 &3378424237401763013
 GameObject:
   m_ObjectHideFlags: 0
