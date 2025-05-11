@@ -14,6 +14,8 @@ public class UINewsBehaviour : MonoBehaviour
 
     public Image newsBG;
 
+    public TMP_FontAsset postFont;
+
     public Sprite prompBG;
     public Sprite postBG;
 
@@ -89,6 +91,9 @@ public class UINewsBehaviour : MonoBehaviour
         SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_Select);
 
         newsDragger.AddNewPost(this.gameObject);
+
+        headline.fontSize = 2;
+        headline.font = postFont;
 
         postAddons.SetActive(true);
 

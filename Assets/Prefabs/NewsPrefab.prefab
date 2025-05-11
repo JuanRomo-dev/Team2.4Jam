@@ -68,8 +68,8 @@ MonoBehaviour:
   m_text: Piloto estadounidense pierde su trabajo al negarse a ceder la pista de
     aterrizaje para el presidente Trump
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e26030b7cc8b9347893261251f9824c, type: 2}
-  m_sharedMaterial: {fileID: 8990008308287130341, guid: 2e26030b7cc8b9347893261251f9824c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ad1717a0cd8e9e4ba79a7280b7d6818, type: 2}
+  m_sharedMaterial: {fileID: -4633453916054110656, guid: 3ad1717a0cd8e9e4ba79a7280b7d6818, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 2.5
+  m_fontSizeBase: 2.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -420,6 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newsData: {fileID: 0}
   newsBG: {fileID: 934009615164300012}
+  postFont: {fileID: 11400000, guid: 2e26030b7cc8b9347893261251f9824c, type: 2}
   prompBG: {fileID: 21300000, guid: d1f5aeeae5b301d4ab3512e55c5d4a75, type: 3}
   postBG: {fileID: 21300000, guid: 6aa5cda66689ed841846f29ddd9e13f0, type: 3}
   postAddons: {fileID: 8554536827769945988}
