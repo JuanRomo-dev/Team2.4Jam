@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headline: "Rockstar confirma que GTA VI se lanzar\xE1 el 26 de mayo de 2026, retrasando
     su fecha original."
-  tier: 2
+  tier: 1
   image: {fileID: 21300000, guid: 2dc85f1b3b05830489860cf90635c6dd, type: 3}
   isReal: 1
   followersGained: 40

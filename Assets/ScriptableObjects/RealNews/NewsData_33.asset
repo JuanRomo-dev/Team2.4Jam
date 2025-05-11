@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
   m_Name: NewsData_33
   m_EditorClassIdentifier: 
-  headline: Orcas vengativas embisten barcos en las costas de Europa, con decenas
-    de incidentes reportados.
-  tier: 2
-  image: {fileID: 21300000, guid: 1760a4200a17eac4db030ed7d1b0b9ce, type: 3}
+  headline: "Astr\xF3nomos detectan un gas en Venus que podr\xEDa ser indicio de
+    vida en sus nubes"
+  tier: 1
+  image: {fileID: 21300000, guid: 6d66fef563c47ea409e77fcefb0e56bc, type: 3}
   isReal: 1
   followersGained: 40
   credibilityGained: 5

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headline: "Un pueblo de EE.UU. nombra a un perro bulldog franc\xE9s como su nuevo
     alcalde"
-  tier: 2
+  tier: 1
   image: {fileID: 21300000, guid: 591b4d186ee665c42b16732bcda539ad, type: 3}
   isReal: 1
   followersGained: 40
