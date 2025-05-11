@@ -104,7 +104,12 @@ public class GameManager : MonoBehaviour
         
         // Get news to check on new round
         currentNewsList = NewsManager.Instance.GetNewsForRound(currentRound);
-        
+
+        if (currentNewsList.Count <= 0)
+        {
+            EndGame(true);
+        }
+
         // Clean selectes news for submit on new round
         selectedNewsList = new List<NewsData>();
 
@@ -157,7 +162,6 @@ public class GameManager : MonoBehaviour
             Invoke(nameof(StartRound), 1f);
             selectedNewsList.Clear();
         }
-
 
         uiManager.EndRound(popularity, reliability);
     }
