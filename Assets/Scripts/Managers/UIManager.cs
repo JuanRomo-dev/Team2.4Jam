@@ -163,7 +163,7 @@ public class UIManager : MonoBehaviour
         {
             float deltaFollowers = newFollowers - actualFollowers;
             
-            if (deltaFollowers >= 5)
+            if (deltaFollowers >= 0)
             {
                 //UP ARROW
                 followersArrow.sprite = arrowUP;
@@ -186,7 +186,7 @@ public class UIManager : MonoBehaviour
         {
             float deltaCredibility = actualCredibility - newCredibility;
 
-            if (deltaCredibility >= 4)
+            if (deltaCredibility >= 0)
             {
                 //DOWN ARROW
                 CredibilityArrow.sprite = arrowDOWN;

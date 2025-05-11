@@ -91,11 +91,14 @@ public class GameManager : MonoBehaviour
 
     public void OnCaptchaCompleted()
     {
+        SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_WindowsStart);
+
         StartRound();
     }
 
     void StartRound()
     {
+
         currentGameState = GameState.PlayingRound;
         currentRound++;
         _roundTimer = 0.0f;
@@ -111,6 +114,8 @@ public class GameManager : MonoBehaviour
 
     public void SubmitRound()
     {
+        SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_Publish);
+
         currentGameState = GameState.RoundEnded;
 
         int followersToAdd = 0;
@@ -154,6 +159,7 @@ public class GameManager : MonoBehaviour
             selectedNewsList.Clear();
         }
 
+
         uiManager.EndRound(popularity, reliability);
     }
     
@@ -161,6 +167,15 @@ public class GameManager : MonoBehaviour
     {
         currentGameState = win ? GameState.GameWon : GameState.GameOver;
         
+        if(currentGameState == GameState.GameOver)
+        {
+            SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_Error);
+        }
+        else if(currentGameState == GameState.GameWon)
+        {
+            SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_Clock);
+        }
+
         uiManager.ShowEndGamePanel(win);
 
         string playerName = "Player"; // Aquí podrías pedir nombre con un input
