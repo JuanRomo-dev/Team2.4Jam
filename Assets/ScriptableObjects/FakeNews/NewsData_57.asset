@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
-  m_Name: NewsData_31 1
+  m_Name: NewsData_57
   m_EditorClassIdentifier: 
-  headline: "Un f\xEDsico franc\xE9s hace creer al mundo que realiz\xF3 la fotograf\xEDa
-    m\xE1s precisa de la estrella Pr\xF3xima Centauri, que result\xF3 ser solo un
-    trozo de chorizo"
-  tier: 2
-  image: {fileID: 21300000, guid: 5db457469a3ca8a49a503fd3cff35c56, type: 3}
-  isReal: 1
-  followersGained: 40
-  credibilityGained: 5
+  headline: "Vlad\xEDmir Putin anuncia que no utilizar\xE1 dobles en p\xFAblico a
+    partir de 2026 por \"motivos filos\xF3ficos\"."
+  tier: 1
+  image: {fileID: 21300000, guid: 74d7e61e58dfff14694c9cfb2d78bf09, type: 3}
+  isReal: 0
+  followersGained: 25
+  credibilityGained: -20

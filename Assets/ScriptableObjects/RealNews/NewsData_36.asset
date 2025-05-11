@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headline: "N\xE1ufrago sobrevive 24 d\xEDas a la deriva en el caribe aliment\xE1ndose
     solo de k\xE9tchup, ajo en polvo y cubitos de caldo"
-  tier: 2
+  tier: 1
   image: {fileID: 21300000, guid: ed5f2bd0234179446a95f5555f1fc96d, type: 3}
   isReal: 1
   followersGained: 40

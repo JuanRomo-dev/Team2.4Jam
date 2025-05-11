@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
+  m_Name: NewsData_56
+  m_EditorClassIdentifier: 
+  headline: "Un nuevo algoritmo de Netflix generar\xE1 finales alternativos para
+    sus series seg\xFAn el estado de \xE1nimo del espectador."
+  tier: 1
+  image: {fileID: 21300000, guid: 9165648f510e31146977f660a4baae4f, type: 3}
+  isReal: 0
+  followersGained: 25
+  credibilityGained: -20

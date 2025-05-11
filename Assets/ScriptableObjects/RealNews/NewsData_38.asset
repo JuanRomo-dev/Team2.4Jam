@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headline: "Un robot le rompi\xF3 el dedo a un ni\xF1o en una partida de ajedrez
     en Rusia."
-  tier: 2
+  tier: 1
   image: {fileID: 21300000, guid: d77c391fe8ea47c43b04b5b0296be235, type: 3}
   isReal: 1
   followersGained: 40

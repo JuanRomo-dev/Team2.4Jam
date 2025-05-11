@@ -15,7 +15,7 @@ MonoBehaviour:
   headline: "Ir\xE1n asumir\xE1 la presidencia de un foro de derechos humanos de
     la ONU, lo que ha desatado una campa\xF1a internacional de protesta de activistas
     de DDHH."
-  tier: 2
+  tier: 1
   image: {fileID: 21300000, guid: feeacd9989616f4438abd9f6dcf483e6, type: 3}
   isReal: 1
   followersGained: 40

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public enum GameState
 {
@@ -162,24 +163,12 @@ public class GameManager : MonoBehaviour
         
         uiManager.ShowEndGamePanel(win);
 
-        // After 10 seconds, show scoreboardPanel
         string playerName = "Player"; // Aquí podrías pedir nombre con un input
         HighscoreElements newScore = new HighscoreElements(playerName, popularity);
         highscoreManager.AddNewHighscore(newScore);
         print("Mostrando panel scoreboard");
         // Esperar y mostrar el panel con lista actualizada
-        Invoke(nameof(highscoreUI.ShowPanel), 3f);
-
-        
-        Time.timeScale = 0f;
-    }
-
-    void ShowScoreboard()
-    {
-        List<HighscoreElements> scores = highscoreManager.GetHighscores();
-        Console.WriteLine("scores size es " + scores.Count);
-        highscoreUI.ShowPanel();
-        highscoreUI.UpdateUI(scores);
+        DOVirtual.DelayedCall(3f, () => highscoreUI.ShowPanel());
     }
 
     // Add news from prompt list to post list
