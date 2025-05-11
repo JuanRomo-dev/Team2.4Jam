@@ -168,7 +168,7 @@ public class GameManager : MonoBehaviour
         highscoreManager.AddNewHighscore(newScore);
         print("Mostrando panel scoreboard");
         // Esperar y mostrar el panel con lista actualizada
-        DOVirtual.DelayedCall(3f, () => highscoreUI.ShowPanel());
+        DOVirtual.DelayedCall(3f, () => highscoreUI.ShowPanel() );
     }
 
     // Add news from prompt list to post list
