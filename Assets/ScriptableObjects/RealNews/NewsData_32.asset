@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b06657a376de474eaecbd3ce7136701, type: 3}
   m_Name: NewsData_32
   m_EditorClassIdentifier: 
-  headline: "Astr\xF3nomos detectan un gas en Venus que podr\xEDa ser indicio de
-    vida en sus nubes"
-  tier: 2
-  image: {fileID: 21300000, guid: 6d66fef563c47ea409e77fcefb0e56bc, type: 3}
+  headline: "Un f\xEDsico franc\xE9s hace creer al mundo que realiz\xF3 la fotograf\xEDa
+    m\xE1s precisa de la estrella Pr\xF3xima Centauri, que result\xF3 ser solo un
+    trozo de chorizo"
+  tier: 1
+  image: {fileID: 21300000, guid: 5db457469a3ca8a49a503fd3cff35c56, type: 3}
   isReal: 1
   followersGained: 40
   credibilityGained: 5
