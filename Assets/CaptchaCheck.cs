@@ -14,6 +14,12 @@ public class CaptchaCheck : MonoBehaviour
 
     public float fadeDuration = 1f;
 
+    public void LoginSession()
+    {
+        // Hide the login screen
+        loginGameObject.SetActive(false);
+    }
+
     public void CheckCaptcha()
     {
         if (!string.IsNullOrEmpty(playerNameInput.text))

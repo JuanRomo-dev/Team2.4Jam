@@ -91,8 +91,6 @@ public class GameManager : MonoBehaviour
 
     public void OnCaptchaCompleted()
     {
-        SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_WindowsStart);
-
         StartRound();
     }
 
