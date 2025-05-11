@@ -156,10 +156,15 @@ public class UIManager : MonoBehaviour
     {
         //FOLLOWERS CHECK
 
-        if(actualFollowers == 0)
+        Color color = Color.white;
+        color.a = 256;
+
+        if (actualFollowers == 0)
         {
+
             actualFollowers = newFollowers;
             followersArrow.sprite = arrowUP;
+            followersArrow.color = color;
         }
         else
         {
@@ -183,6 +188,7 @@ public class UIManager : MonoBehaviour
         {
             actualCredibility = newCredibility;
             CredibilityArrow.sprite = arrowDOWN;
+            CredibilityArrow.color = color;
         }
         else
         {
