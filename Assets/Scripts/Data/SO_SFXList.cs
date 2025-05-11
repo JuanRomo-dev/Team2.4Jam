@@ -42,7 +42,12 @@ public class SO_SFXList : ScriptableObject
 
 public enum SFX_Type
 {
-    
+    SFX_Clock,
+    SFX_WindowsStart,
+    SFX_Error,
+    SFX_Publish,
+    SFX_Select,
+    SFX_Whoos
 }
 
 [System.Serializable]

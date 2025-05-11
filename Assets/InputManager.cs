@@ -16,12 +16,16 @@ public class InputManager : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.A))
         {
-            camaraTransitionsManager.ChangeView(CamaraTransitions.VIEWS.ROOM_VIEW); 
+            camaraTransitionsManager.ChangeView(CamaraTransitions.VIEWS.ROOM_VIEW);
+            SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_Whoos);
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
             camaraTransitionsManager.ChangeView(CamaraTransitions.VIEWS.PC_VIEW);
+            SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_Whoos);
         }
+
+
     }
 }

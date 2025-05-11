@@ -13,5 +13,15 @@ MonoBehaviour:
   m_Name: SFX_List
   m_EditorClassIdentifier: 
   soundEffects:
-  - SFX: {fileID: 0}
+  - SFX: {fileID: 8300000, guid: ca8c6173749506c48a983acabd2141a1, type: 3}
     type: 0
+  - SFX: {fileID: 8300000, guid: 32278e26fea7adc46bf7acbcbda66844, type: 3}
+    type: 1
+  - SFX: {fileID: 8300000, guid: b4053fe539e60154d93b81ae10fa2c12, type: 3}
+    type: 2
+  - SFX: {fileID: 8300000, guid: c1735fac77ea3244eb6e8c3f6fa8df08, type: 3}
+    type: 3
+  - SFX: {fileID: 8300000, guid: beea88531b29bd14d8fe9f2b29e4bced, type: 3}
+    type: 5
+  - SFX: {fileID: 8300000, guid: d8ec75d85c09b434582eb30a4c4d9997, type: 3}
+    type: 4

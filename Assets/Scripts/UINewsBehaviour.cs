@@ -86,6 +86,8 @@ public class UINewsBehaviour : MonoBehaviour
 
     public void ChangeColumns()
     {
+        SoundManager.Instance.PlaySFXSound(SFX_Type.SFX_Select);
+
         newsDragger.AddNewPost(this.gameObject);
 
         postAddons.SetActive(true);
