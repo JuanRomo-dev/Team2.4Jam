@@ -9,6 +9,9 @@ public class NewsDragger : MonoBehaviour
 
     public UIManager uiManager;
 
+    public GameObject largeImagePanel;
+    public Image largeImage;
+
     public void Start()
     {
         uiManager = GetComponent<UIManager>();
@@ -17,6 +20,17 @@ public class NewsDragger : MonoBehaviour
         {
             Debug.Log("Add the post list GO to the UI MANAGER");
         }
+    }
+
+    public void ToggleImageView()
+    {
+        bool isActive = largeImagePanel.activeSelf;
+        largeImagePanel.SetActive(!isActive);
+    }
+
+    public void EnlargeImage(Image image)
+    {
+        largeImage.sprite = image.sprite;
     }
 
     public void AddNewPost(GameObject prompToAdd)

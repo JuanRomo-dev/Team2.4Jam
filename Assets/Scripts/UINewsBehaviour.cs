@@ -30,6 +30,12 @@ public class UINewsBehaviour : MonoBehaviour
         Debug.Log(newsDragger);
     }
 
+    public void ClickOnImage()
+    {
+        newsDragger.ToggleImageView();
+        newsDragger.EnlargeImage(image);
+    }
+
     public void SetInformation(NewsData _newsData)
     {
         newsData = _newsData;
