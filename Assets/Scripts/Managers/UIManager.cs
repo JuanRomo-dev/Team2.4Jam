@@ -30,11 +30,8 @@ public class UIManager : MonoBehaviour
     [Header("Arrows")]
     [Space(10)]
 
-    public Sprite arrowSUPER;
     public Sprite arrowUP;
-    public Sprite arrowEQUAL;
     public Sprite arrowDOWN;
-    public Sprite arrowSADGE;
 
     [Header("Hour")]
     [Space(10)]
@@ -165,23 +162,13 @@ public class UIManager : MonoBehaviour
         else
         {
             float deltaFollowers = newFollowers - actualFollowers;
-
-            if (deltaFollowers >= 10)
-            {
-                //SUPER ARROW
-                followersArrow.sprite = arrowSUPER;
-            }
-            else if (deltaFollowers >= 5)
+            
+            if (deltaFollowers >= 5)
             {
                 //UP ARROW
                 followersArrow.sprite = arrowUP;
             }
-            else if (deltaFollowers <= -5)
-            {
-                //SADGE ARROW
-                followersArrow.sprite = arrowSADGE;
-            }
-            else if (deltaFollowers <= 0)
+            if (deltaFollowers <= 0)
             {
                 //DOWN ARROW
                 followersArrow.sprite = arrowDOWN;
@@ -199,20 +186,15 @@ public class UIManager : MonoBehaviour
         {
             float deltaCredibility = actualCredibility - newCredibility;
 
-            if (deltaCredibility >= 10)
-            {
-                //SADGE ARROW
-                CredibilityArrow.sprite = arrowSADGE;
-            }
-            else if (deltaCredibility >= 5)
+            if (deltaCredibility >= 4)
             {
                 //DOWN ARROW
                 CredibilityArrow.sprite = arrowDOWN;
             }
-            else if (deltaCredibility == 0)
+            else if (deltaCredibility <= 0)
             {
                 //EQUAL ARROW
-                CredibilityArrow.sprite = arrowEQUAL;
+                CredibilityArrow.sprite = arrowUP;
             }
         }
 
@@ -234,10 +216,8 @@ public class UIManager : MonoBehaviour
             winPanel.SetActive(true);
         else
             gameOverPanel.SetActive(true);
-    }
 
-    public void ShowScoreboardPanel()
-    {
+        //TODO Apagar el panel este tras x segundos
 
     }
 }
