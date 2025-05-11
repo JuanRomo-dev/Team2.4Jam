@@ -98,7 +98,6 @@ public class GameManager : MonoBehaviour
 
     void StartRound()
     {
-
         currentGameState = GameState.PlayingRound;
         currentRound++;
         _roundTimer = 0.0f;
@@ -182,8 +181,12 @@ public class GameManager : MonoBehaviour
         HighscoreElements newScore = new HighscoreElements(playerName, popularity);
         highscoreManager.AddNewHighscore(newScore);
         print("Mostrando panel scoreboard");
+
+        //Send the high score to the UI end panels, the previous ones to the leaderboards
+        uiManager.SetHighScore(newScore.points);
+
         // Esperar y mostrar el panel con lista actualizada
-        DOVirtual.DelayedCall(3f, () => highscoreUI.ShowPanel() );
+        //DOVirtual.DelayedCall(3f, () => highscoreUI.ShowPanel() );
     }
 
     // Add news from prompt list to post list

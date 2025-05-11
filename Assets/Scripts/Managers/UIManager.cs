@@ -51,7 +51,9 @@ public class UIManager : MonoBehaviour
     [Header("Game End")]
     public GameObject gameOverPanel;
     public GameObject winPanel;
-    
+
+    public TextMeshProUGUI winPointsTxt;
+    public TextMeshProUGUI losePointsTxt;
 
     private void Awake()
     {
@@ -219,5 +221,11 @@ public class UIManager : MonoBehaviour
 
         //TODO Apagar el panel este tras x segundos
 
+    }
+
+    public void SetHighScore(float highScore)
+    {
+        winPointsTxt.text = highScore.ToString();
+        losePointsTxt.text = highScore.ToString();
     }
 }
