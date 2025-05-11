@@ -54,6 +54,7 @@ public class UIManager : MonoBehaviour
     [Header("Game End")]
     public GameObject gameOverPanel;
     public GameObject winPanel;
+    
 
     private void Awake()
     {
@@ -233,5 +234,10 @@ public class UIManager : MonoBehaviour
             winPanel.SetActive(true);
         else
             gameOverPanel.SetActive(true);
+    }
+
+    public void ShowScoreboardPanel()
+    {
+
     }
 }

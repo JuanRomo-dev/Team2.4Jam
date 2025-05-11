@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,7 +37,9 @@ public class GameManager : MonoBehaviour
     private int correctPoints = 1;
     private int incorrectPoints = -3; // negative
     private float popularityFallingTimer = 0f;
-    
+
+    public HighscoreManager highscoreManager;
+    public HighScoreUI highscoreUI;
     
     private void Awake()
     {
@@ -141,7 +144,7 @@ public class GameManager : MonoBehaviour
         
         popularity += followersToAdd;
 
-        if (reliability < 0f)
+        if (reliability <= 0f)
         {
             EndGame(false);
         } else {
@@ -158,8 +161,25 @@ public class GameManager : MonoBehaviour
         currentGameState = win ? GameState.GameWon : GameState.GameOver;
         
         uiManager.ShowEndGamePanel(win);
+
+        // After 10 seconds, show scoreboardPanel
+        string playerName = "Player"; // Aquí podrías pedir nombre con un input
+        HighscoreElements newScore = new HighscoreElements(playerName, popularity);
+        highscoreManager.AddNewHighscore(newScore);
+        print("Mostrando panel scoreboard");
+        // Esperar y mostrar el panel con lista actualizada
+        Invoke(nameof(highscoreUI.ShowPanel), 3f);
+
         
         Time.timeScale = 0f;
+    }
+
+    void ShowScoreboard()
+    {
+        List<HighscoreElements> scores = highscoreManager.GetHighscores();
+        Console.WriteLine("scores size es " + scores.Count);
+        highscoreUI.ShowPanel();
+        highscoreUI.UpdateUI(scores);
     }
 
     // Add news from prompt list to post list
