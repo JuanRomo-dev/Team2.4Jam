@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,5 +49,10 @@ public class HighscoreManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public List<HighscoreElements> GetHighscores()
+    {
+        return new List<HighscoreElements>(highscoreElements);
     }
 }
